@@ -28,9 +28,9 @@ html {
     display: flex;
     text-align: center;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;   
 }
+
 /*Add black border between Header and Context Section*/
 #border{
 	background-color: black;	
@@ -51,6 +51,20 @@ html {
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+
+#context-instructions{
+	background-color:#9CAEF7;	
+	height:30px;
+    padding-top: 15px;
+	margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px
 }
 
 #context-text-area{
@@ -100,6 +114,8 @@ html {
         padding-top:20%
         
     }
+
+    
 
     /*Factors box on the left*/
     #factors-box {
