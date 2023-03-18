@@ -9,6 +9,7 @@
     <script defer type="text/javascript" src="appscripts/main.js">
     </script>
     <title>Can Singaporeans win the battle against the rising cost of living?</title>
+    
 </head>
 
 <!-- body -->
@@ -18,48 +19,117 @@
     
     <!--Title Header-->
     <div id="title-bar">
-        Can Singaporeans win the battle against the rising cost of living?
+        <p id = "title-text"> Can Singaporeans win the battle against the rising cost of living? <br><br>
+        <img src="resources/boxing-gif.gif" height="100px"></p> 
+        
     </div>
 
     <div id="border">
     </div>
 
-    <!--Context Section-->
+    <!--Inflation Section-->
     <div id="context-title" >
-        Context
+        Inflation
     </div>
 
     <div id="context-instructions" >
-        Click to explore the different factors
+        Click to explore the different types of inflation
     </div>
 
     <div id="context-text-area">
         <div class = "content-text-box-1" id = "info-box">
             <canvas id="context-chart"></canvas>
-        
         </div>
+        
+        
         <div class = "content-text-box-1" id= "factors-box">
-            <div class = "list-of-factors clickable" id="factor-1" onclick="showFactor1Content()"> Consumer Inflation </div>
-            <div class = "list-of-factors clickable" id="factor-2" onclick="showFactor2Content()"> GST Increase </div>
-            <div class = "list-of-factors clickable" id="factor-3" onclick="showFactor3Content()"> Factor 3 </div>
-            <div class = "list-of-factors clickable" id="factor-4" onclick="showFactor4Content()"> Factor 4 </div>
+            <div class = "list-of-factors clickable" id="factor-1" onclick="showFactor1Content()"> Inflation per Basket of Goods </div>
+            <div class = "list-of-factors clickable" id="factor-2" onclick="showFactor2Content()"> Core Inflation </div>
+            <div class = "list-of-factors clickable" id="factor-3" onclick="showFactor3Content()"> Overall Inflation </div>
+            <div class="src-link">Source of data: <a href= https://www.singstat.gov.sg/whats-new/latest-news/cpi-highlights target="_blank"> Singstat </a></div>
         </div>
     </div>
 
     <div id="border"></div>
 
+    <div id="fun-fact">
+        Do you want to know which income percentile you belong to? <br><br><br>
+        <div id = enter-income>
+        Enter your monthly average household income:
+           <input id="input-income-value" placeholder="e.g. 9067 (without $)">
+        </div>
+        <div id="enter-income-input-button">
+        <br>
+        <button onclick="generateincomedecile()">Enter</button> <br> <br>
+        </div>
+        <div id="result-percentile"></div> 
+    </div>
+
+    <div id="border">
+    </div>
+    
     <!--Income vs Increase in CPI Comparison-->
     <div id="income-vs-cpi-title" >
-        How does the average household income compare to CPI?
+        <h2></h2>How does the average household income compare to inflation rates? </h2>
+        
     </div>
 
     <div id="income-vs-cpi-content">
         <div class = "content-text-box-2" id = "data-box-1">
-            Data visualisation <br>
+            <canvas id = data-visualisation-1></canvas>
+            Source of data: <a href= https://www.singstat.gov.sg/whats-new/latest-news/cpi-highlights> Singstat </a>
+            <br>
         </div>
 
         <div class = "content-text-box-2" id= "explanation-box-1">
-            Explanation of data
+            Explanation of data <br><br>
+            <table>
+                <tr class="tm-tr-header">
+                  <th>&nbsp;</th>
+                  <th>Income Growth Rate</th>
+                  <th>Inflation Rate</th>
+                </tr>
+                <tr>
+                  <td class="tm-text-left">2015</td>
+                  <td>xx%</td>
+                  <td>xx%</td>
+                </tr>
+                <tr>
+                  <td class="tm-text-left">2016</td>
+                  <td>xx%</td>
+                  <td>xx%</td>
+                </tr>
+                <tr>
+                  <td class="tm-text-left">2017</td>
+                  <td>xx%</td>
+                  <td>xx%</td>
+                </tr>
+                <tr>
+                  <td class="tm-text-left">2018</td>
+                  <td>xx%</td>
+                  <td>xx%</td>
+                </tr>
+                <tr>
+                  <td class="tm-text-left">2019</td>
+                  <td>xx%</td>
+                  <td>xx%</td>
+                </tr>
+                <tr>
+                  <td class="tm-text-left">2020</td>
+                  <td>xx%</td>
+                  <td>xx%</td>
+                </tr>
+                <tr>
+                    <td class="tm-text-left">2021</td>
+                    <td>xx%</td>
+                    <td>xx%</td>
+                  </tr>
+                  <tr>
+                    <td class="tm-text-left">2022</td>
+                    <td>xx%</td>
+                    <td>xx%</td>
+                  </tr>
+                </table>
         </div>    
     </div>
     <div id="border"></div>
@@ -67,11 +137,14 @@
     
     <!--Next Data Comparison-->
     <div id="factor-vs-factor-title-1" >
+        
         Data Visualisation 2
     </div>
 
     <div id="factor-vs-factor-content-1">
         <div class = "content-text-box-3" id = "data-box-2">
+            <canvas id = data-visualisation-2></canvas>
+            
             Data visualisation <br>
         </div>
 
@@ -88,6 +161,7 @@
 
     <div id="factor-vs-factor-content-2">
         <div class = "content-text-box-4" id = "data-box-3">
+            <canvas id = data-visualisation-3></canvas>
             Data visualisation <br>
         </div>
 
