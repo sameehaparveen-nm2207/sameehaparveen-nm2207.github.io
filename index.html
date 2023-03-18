@@ -4,17 +4,80 @@
     <title>My NM2207 GitHub Portfolio</title>
     <script src="scripts/counter.js"></script>
     <link rel="stylesheet" href="styles/styles.css" />
+    <meta charset="UTF-8">
   </head>
+
   <body>
-    <h1>Welcome to my GitHub Webpage! 🚀</h1>
-    <div id="project">
-      <a href="finalproject_datavisualisation/www/finalproject.html">Click here</a> to view my NM2207 Final Project!
+    <div id = title-header>
+    <h1>&#127776 Welcome to Sameeha's GitHub Webpage! &#127800</h1>
     </div>
 
-    <h3>Here's a hungry mouse. Please feed him!</h3>
-    <h3 class="mouse">🐁</h3>
-    <h3>Food counter: <span class="counter">0</span> 🥙</h3>
-    <button>Feed!</button>
+    <div id="border">
+    </div>
+
+    <div id="nm2207-project" >
+      <center><u><h1>NM2207 Final Project </h1></u></center>
+      <p id="links">
+      &#127804 <a href = "http://htmlpreview.github.io/?https://raw.githubusercontent.com/sameehaparveen-nm2207/sameehaparveen-nm2207.github.io/main/finalproject_datavisualisation/www/finalproject.html" target="_blank">Link to HTML </a><br>
+      &#127804 <a href = "resources/nm2207-finalproject-storyboarding.png" target="_blank"> Link to Storyboard</a><br>
+      &#127804 <a href = "https://github.com/sameehaparveen-nm2207/sameehaparveen-nm2207.github.io/tree/main/finalproject_datavisualisation"target="_blank"> Link to GitHub Repository</a> <br><Br>
+      </p>
+
+      <table>
+
+        <tr>
+          <td><b>Problem Statement</b></td>
+          <td>Can Singaporeans win the battle against the rising cost of living?
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>Background</b></td>
+          <td>Singapore has once again been ranked as the world's most expensive city for the 8th time in a decade. It has faced a consistently high cost of living which has been further worsened due to the high inflation. Prices haven risen by 8.1% in local-currency terms, which is the highest rate in 20 years. The high cost of living has even become a significant source of mental health worries among Singaporeans. <br><br> 
+            The government has been rolling out various support measures in the form of assurance packages to help cushion the effects of this rising cost of living. <br><br>
+            I would like to analyse what are the factors contributing to this rising cost of living and whether Singaporeans are able to cope with this rising cost of living in terms of income, government assurance packages and long-term finances. 
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>Data</b></td>
+          <td><b><u>1.	Data Visualisation of increase in CPI to showcase inflation:</b></u> <br>
+            Split up the types of inflation into: Overall inflation, core inflation, and one to showcase increase for each basket of goods.<br>
+            Link to data: <a href="https://www.singstat.gov.sg/whats-new/latest-news/cpi-highlights"> https://www.singstat.gov.sg/whats-new/latest-news/cpi-highlights </a><br><br>
+            
+            <b>Data Cleaning:</b><br>
+            Extracted just the data from 2015 to 2022 to see recent trend. Only kept values for overall basket of goods by filtering out individual item prices. To plot a line graph of the percent change to show trend over the years. <br><br>
+            
+            <b><u>2.	Data Visualisation on average monthly household income:</b></u> <br>
+            Link to data: <a href="https://tablebuilder.singstat.gov.sg/table/CT/17820">https://tablebuilder.singstat.gov.sg/table/CT/17820</a> <br><br>
+            
+            <b>Data Cleaning:</b><br>
+            Extracted data from 2015 to 2022 to follow the time period of the inflation rate data visualisation. Only kept total, 4th and 5th decile values to compare the average values and compare the median values (gives a better representation of the general population).<br><br>
+            
+            <b><u>3.	Data Visualisation on average household expenditure</b></u> <br>
+            Link to data: <a href ="https://tablebuilder.singstat.gov.sg/table/TS/M212981">https://tablebuilder.singstat.gov.sg/table/TS/M212981</a> <br><br>
+            
+            <b>Data Cleaning: </b><br>
+            Only filter out 2018 data as above data are all from 2015 onwards (the household expenditure survey is carried out every 5 years hence the latest data as of now is 2018). Will keep the larger categories and remove the sub-categories (e.g., sub-categories under food and housing and related expenditures). 
+            </td>
+        </tr>
+
+        <tr>
+          <td><b>Analysis</b></td>
+          <td><b><u>1.	Data Visualisation of increase in CPI to showcase inflation:</u></b><br>
+            Will be plotting a line graph of the percent change to see trend of inflation over the years and which basket of goods has the highest increase in inflation over the years. <br><br>
+            <b><u>2.	Data Visualisation on average household income:</u></b><br>
+            Will be plotting a line graph of the average household income and have a table of percent change in average household income from the previous year. I will then compare this percentage change with that of the inflation rate. <br><br>
+            <b><u>3.	Data Visualisation on average household expenditure</u></b><br>
+            Will be plotting a pie chart to see which basket of goods take up a larger portion of the monthly household expenditure, then compare it to the rates of inflation per basket of goods to see which expenses are affected by a larger rate of inflation.<br><br>
+            Will then compare this with government assurance packages to see if the help provided is targeting the right basket of goods (i.e., subsiding/providing payouts for goods affected by higher rates of inflation)
+            </td>
+        </tr>
+        </table>
+
+
+
+    </div>
 
   </body>
 </html>
