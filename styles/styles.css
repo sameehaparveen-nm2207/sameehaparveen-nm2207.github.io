@@ -3,8 +3,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
-  padding-left: 12px;
-  padding-top: 4px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding:0;
 }
 
 .mouse {
@@ -18,6 +20,78 @@ body {
 h2 {
   color: #f9a8d4;
 }
+
+#border{
+	background-color: black;	
+	height:10px;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* title */
+#title-header{
+	background-color: #ECBDED;  
+  color: black;
+  margin: 0;
+  padding: 0;  
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;   
+}
+
+/* NM2207 Project */
+#nm2207-project{
+  background-color: #334155;
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+  align-items: center; 
+}
+
+#links{
+  font-size: 16px;
+}
+
+#links a:link {
+  color: white;
+  text-decoration: none;
+}
+
+#links a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+#links a:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+
+#links a:active {
+  color: green;
+  text-decoration: none;
+}
+
+table{
+  font-size:14px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-collapse: collapse;
+  background-color:#E2F3FE;
+  color:black;
+}
+
+td {
+  border:3px solid black;
+  text-align: left;
+  padding: 4px;
+  
+}
+
+
 
 /* CSS */
 button {
