@@ -90,6 +90,14 @@ td {
   padding: 4px;
   
 }
+#week11title{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#week12title{
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 /* CSS */
 button {
