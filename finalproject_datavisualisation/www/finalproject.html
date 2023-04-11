@@ -12,12 +12,13 @@
     
 </head>
 
-<!-- body -->
+<!------------------------------------------------------------ Body ------------------------------------------------------------------->
 
 <body>
     
     
-    <!--Title Header-->
+<!------------------------------------------------------------ Title Bar -------------------------------------------------------------->
+
     <div id="title-bar">
         <p id = "title-text"> Can Singaporeans win the battle against the rising cost of living? <br><br>
         <img src="resources/boxing-gif.gif" height="100px"></p> 
@@ -27,7 +28,8 @@
     <div id="border">
     </div>
 
-    <!--Inflation Section-->
+<!---------------------------------------------------------- Inflation Section ------------------------------------------------------------------->
+
     <div id="context-title" >
         Inflation
     </div>
@@ -35,22 +37,27 @@
     <div id="context-instructions" >
         Click to explore the different types of inflation
     </div>
+<!------------------------------------------------------------ Inflation Graph ------------------------------------------------------------------->
 
     <div id="context-text-area">
         <div class = "content-text-box-1" id = "info-box">
             <canvas id="context-chart"></canvas>
         </div>
-        
-        
+<!------------------------------------------------------------ Factor Buttons ------------------------------------------------------------------->
+
         <div class = "content-text-box-1" id= "factors-box">
-            <div class = "list-of-factors clickable" id="factor-1" onclick="showFactor1Content()"> Inflation per Basket of Goods </div>
+            <div class = "list-of-factors clickable" id="factor-1" onclick="showFactor1Content()"> Inflation per Basket of Goods without Transport </div>
+            <div class = "list-of-factors clickable" id="factor-4" onclick="showFactor4Content()"> Inflation per Basket of Goods with Transport </div>
             <div class = "list-of-factors clickable" id="factor-2" onclick="showFactor2Content()"> Core Inflation </div>
             <div class = "list-of-factors clickable" id="factor-3" onclick="showFactor3Content()"> Overall Inflation </div>
+            
             <div class="src-link">Source of data: <a href= https://www.singstat.gov.sg/whats-new/latest-news/cpi-highlights target="_blank"> Singstat </a></div>
         </div>
     </div>
+<!------------------------------------------------------------ End of Inflation ------------------------------------------------------------------->
 
     <div id="border"></div>
+<!------------------------------------------------------------ Income Percentile ------------------------------------------------------------------->
 
     <div id="fun-fact">
         Do you want to know which income percentile you belong to? <br><br><br>
@@ -64,105 +71,245 @@
         </div>
         <div id="result-percentile"></div> 
     </div>
+<!------------------------------------------------------- End of Income Percentile ------------------------------------------------------------------->
 
     <div id="border">
     </div>
-    
-    <!--Income vs Increase in CPI Comparison-->
+<!----------------------------------------------------Income vs Increase in CPI Comparison----------------------------------------------->
+<!------------------------------------------------Income vs Increase in CPI Comparison Graphs----------------------------------------------->
+
     <div id="income-vs-cpi-title" >
         <h2></h2>How does the average household income compare to inflation rates? </h2>
-        
     </div>
 
-    <div id="income-vs-cpi-content">
-        <div class = "content-text-box-2" id = "data-box-1">
-            <canvas id = data-visualisation-1></canvas>
-            Source of data: <a href= https://www.singstat.gov.sg/whats-new/latest-news/cpi-highlights> Singstat </a>
-            <br>
+<!------------------------------------------------------High Income and Low Income Buttons----------------------------------------------->
+
+    <div id="high-low-income" >
+        <div class= "income-change clickable" id ="low-income" onclick="showlowincomegrowthcontent(); showlowincomechangecontent()">
+            Lower Income Group
         </div>
-
-        <div class = "content-text-box-2" id= "explanation-box-1">
-            Explanation of data <br><br>
-            <table>
-                <tr class="tm-tr-header">
-                  <th>&nbsp;</th>
-                  <th>Income Growth Rate</th>
-                  <th>Inflation Rate</th>
-                </tr>
-                <tr>
-                  <td class="tm-text-left">2015</td>
-                  <td>xx%</td>
-                  <td>xx%</td>
-                </tr>
-                <tr>
-                  <td class="tm-text-left">2016</td>
-                  <td>xx%</td>
-                  <td>xx%</td>
-                </tr>
-                <tr>
-                  <td class="tm-text-left">2017</td>
-                  <td>xx%</td>
-                  <td>xx%</td>
-                </tr>
-                <tr>
-                  <td class="tm-text-left">2018</td>
-                  <td>xx%</td>
-                  <td>xx%</td>
-                </tr>
-                <tr>
-                  <td class="tm-text-left">2019</td>
-                  <td>xx%</td>
-                  <td>xx%</td>
-                </tr>
-                <tr>
-                  <td class="tm-text-left">2020</td>
-                  <td>xx%</td>
-                  <td>xx%</td>
-                </tr>
-                <tr>
-                    <td class="tm-text-left">2021</td>
-                    <td>xx%</td>
-                    <td>xx%</td>
-                  </tr>
-                  <tr>
-                    <td class="tm-text-left">2022</td>
-                    <td>xx%</td>
-                    <td>xx%</td>
-                  </tr>
-                </table>
-        </div>    
+        <div class= "income-change clickable" id="high-income" onclick="showhighincomegrowthcontent(); showhighincomechangecontent()">
+            Higher Income Group
+        </div>
     </div>
+<!---------------------------------------------------------Income Growth Graph Area------------------------------------------------------>
+    <div id="income-vs-cpi-content-1">
+        <div class = "content-text-box-2" id = "growth-box">
+            <p class="placeholder-text">Click to Explore Average Monthly Household Income from 2015 to 2019</p>
+            <canvas id = income-growth-graph></canvas>
+        </div>
+<!---------------------------------------------------------Income Change Graph Area------------------------------------------------------>
+        <div class = "content-text-box-2" id= "change-box">
+            <p class="placeholder-text">Click to Explore Average % Change in Monthly Household Income from 2015 to 2019</p>
+            <canvas id = income-change-graph></canvas>
+        </div>     
+    </div>
+<!-------------------------------------------------Income vs Increase in CPI Comparison Table----------------------------------------------->
+
+    <div id="income-vs-cpi-content-2" >
+            <table>
+                <tr>
+                    <th id="income-table-head" colspan="13">Income Growth Rate VS Inflation Rate (%) </th>
+                </tr>
+                <tr id="decile-header">
+                  <th>&nbsp;</th>
+                  <th>Total</th>
+                  <th>1st Decile</th>
+                  <th>2nd Decile</th>
+                  <th>3rd Decile</th>
+                  <th>4th Decile</th>
+                  <th>5th Decile</th>
+                  <th>6th Decile</th>
+                  <th>7th Decile</th>
+                  <th>8th Decile</th>
+                  <th>9th Decile</th>
+                  <th>10th Decile</th>
+                  <th>Inflation Rate</th>
+                  
+                </tr>
+                <tr>
+                  <td class="year-column">2016</td>
+                  <td class="greater-than">-0.21</td>
+                  <td class="smaller-than">-0.74</td>
+                  <td class="greater-than">2.47</td>
+                  <td class="greater-than">1.51</td>
+                  <td class="greater-than">2.75</td>
+                  <td class="greater-than">1.42</td>
+                  <td class="greater-than">1.65</td>
+                  <td class="greater-than">0.87</td>
+                  <td class="greater-than">1.82</td>
+                  <td class="greater-than">2.02</td>
+                  <td class="smaller-than">-4.97</td>
+                  <td class ="inflation-rate">-0.50</td>
+                </tr>
+                <tr>
+                  <td class="year-column">2017</td>
+                  <td class="greater-than">4.07</td>
+                  <td class="greater-than">1.79</td>
+                  <td class="greater-than">0.75</td>
+                  <td class="greater-than">2.34</td>
+                  <td class="greater-than">1.87</td>
+                  <td class="greater-than">5.07</td>
+                  <td class="greater-than">1.04</td>
+                  <td class="greater-than">5.44</td>
+                  <td class="greater-than">4.26</td>
+                  <td class="greater-than">3.61</td>
+                  <td class="greater-than">5.78</td>
+                  <td class = "inflation-rate">0.60</td>
+                </tr>
+                <tr>
+                  <td class="year-column">2018</td>
+                  <td class="greater-than">0.88</td>
+                  <td class="greater-than">1.25</td>
+                  <td class="greater-than">1.77</td>
+                  <td class="smaller-than">0.31</td>
+                  <td class="greater-than">3.17</td>
+                  <td class="greater-than">1.93</td>
+                  <td class="greater-than">3.80</td>
+                  <td class="greater-than">0.92</td>
+                  <td class="greater-than">1.65</td>
+                  <td class="greater-than">3.36</td>
+                  <td class="smaller-than">-2.74</td>
+                  <td class = "inflation-rate">0.40</td>
+                </tr>
+                <tr>
+                  <td class="year-column">2019</td>
+                  <td class="greater-than">2.12</td>
+                  <td class="greater-than">4.09</td>
+                  <td class="greater-than">3.30</td>
+                  <td class="greater-than">1.22</td>
+                  <td class="greater-than">2.09</td>
+                  <td class="greater-than">3.51</td>
+                  <td class="greater-than">2.93</td>
+                  <td class="greater-than">2.48</td>
+                  <td class="greater-than">3.78</td>
+                  <td class="greater-than">1.22</td>
+                  <td class="greater-than">0.95</td>
+                  <td class = "inflation-rate">0.60</td>
+                </tr>
+                <tr>
+                  <td class="year-column">2020</td>
+                  <td class="smaller-than">-1.24</td>
+                  <td class="smaller-than">-2.85</td>
+                  <td class="greater-than">3.98</td>
+                  <td class="smaller-than">-0.90</td>
+                  <td class="greater-than">0.75</td>
+                  <td class="smaller-than">-0.69</td>
+                  <td class="smaller-than">-1.90</td>
+                  <td class="smaller-than">-0.57</td>
+                  <td class="smaller-than">-3.39</td>
+                  <td class="smaller-than">-2.23</td>
+                  <td class="smaller-than">-0.77</td>
+                  <td class = "inflation-rate">-0.20</td>
+                </tr>
+                <tr>
+                  <td class="year-column">2021</td>
+                  <td class="smaller-than">0.23</td>
+                  <td class="greater-than">2.94</td>
+                  <td class="smaller-than">1.38</td>
+                  <td class="smaller-than">0.04</td>
+                  <td class="greater-than">3.85</td>
+                  <td class="greater-than">2.80</td>
+                  <td class="greater-than">5.34</td>
+                  <td class="greater-than">2.54</td>
+                  <td class="greater-than">3.19</td>
+                  <td class="smaller-than">2.27</td>
+                  <td class="smaller-than">-7.17</td>
+                  <td class = "inflation-rate">2.30</td>
+                </tr>
+                <tr>
+                  <td class="year-column">2022</td>
+                  <td class="greater-than">6.90</td>
+                  <td class="greater-than">13.24</td>
+                  <td class="smaller-than">5.60</td>
+                  <td class="greater-than">8.99</td>
+                  <td class="smaller-than">3.43</td>
+                  <td class="smaller-than">4.79</td>
+                  <td class="smaller-than">4.29</td>
+                  <td class="smaller-than">4.80</td>
+                  <td class="greater-than">6.90</td>
+                  <td class="greater-than">8.45</td>
+                  <td class="greater-than">8.81</td>
+                  <td class = "inflation-rate">6.10</td>
+                </tr>
+            </table>  
+    
+<!-----------------------------------------------Income vs Increase in CPI Comparison Explanation----------------------------------------------->
+<p class="income-inflation-explanation"> 
+    <b><u>Analysis of Average Income Graph:</u></b> Monthly average household income has generally seen an increase over the years for all deciles. 
+    From 2019 to 2020, almost all deciles saw a decrease in income except for those in the 2nd and 4th decile. However income started to increase again, more significantly than before, after 2020. <br><br>
+    <b><u>Analysis of Yearly Percentage Change Graph and Table:</u></b> In the earlier years of 2016 to 2019, almost all deciles had an income growth that was above inflation rate, which meant that the income growth of most Singaporeans could generally support them through inflation.
+    From 2019 to 2020, inflation rate dropped to a negative, but most income growth rates also dropped to a negative, and to a more significant extent.
+    From 2020 onwards, inflation rate continued to increase, so did the income growth rate. But a portion of the population's income growth rate went below inflation rate, meaning that their income was becoming insufficient to support them through the rising cost of living.
+</p>
+
+<!--------------------------------------------- ----End of Income vs Increase in CPI Comparison----------------------------------------------->
+</div>
     <div id="border"></div>
     
     
-    <!--Next Data Comparison-->
-    <div id="factor-vs-factor-title-1" >
-        
-        Data Visualisation 2
+<!-------------------------------------------------------Household Expenditure Section----------------------------------------------->
+    <div id="household-expenditure-section-title" >
+        What do Singaporeans spend their monthly income on?
     </div>
 
-    <div id="factor-vs-factor-content-1">
-        <div class = "content-text-box-3" id = "data-box-2">
-            <canvas id = data-visualisation-2></canvas>
-            
-            Data visualisation <br>
+    <div id="household-expenditure-analysis">
+        <div class = "content-text-box-3" id = "expenditure-chart">
+            <canvas id = expenditure-pie-chart></canvas>
+             
         </div>
 
-        <div class = "content-text-box-3" id= "explanation-box-2">
-            Explanation of data
-        </div>    
+        <div class = "content-text-box-3" id = "inflation-comparison-chart">
+            <canvas id = inflation-bar-chart></canvas>
+        </div> 
     </div>
+    
+    <div id= "expenditure-explanation">
+        <p><b><u>Analysis of Pie Chart:</u></b> Singaporeans spend most on food, followed by transport and then recreation and culture. 
+        This is reasonable given that expenditures for these 3 categories are made more often, either daily or more than once a month.
+        The 'Others' category include expenditure on miscellaneous goods and services, including personal care services, social support services and insurance, and expenditure on alcoholic beverages and tobacco. <br><br>
+        <b><u>Analysis of Bar Chart:</u></b> The categories that were more significantly impacted by inflation from 2018 to 2022 are transport, recreation & culture and food. Singaporeans spend most on these 3 categories, based on the trend observed in the pie chart.
+        This shows that the impact of inflation is in fact rather severe as categories that make up a significant portion of one's household expenditure are more seriously affected by inflation than other categories.
+        </p>
+    </div> 
+
+<!-----------------------------------------------Inflation Rate Comparison from 2018 to 2022----------------------------------------------->
+
     <div id="border"></div>
 
     <!--Next Data Comparison-->
     <div id="factor-vs-factor-title-2" >
-        Data Visualisation 3
+        So what is the government doing to help?
     </div>
 
     <div id="factor-vs-factor-content-2">
         <div class = "content-text-box-4" id = "data-box-3">
             <canvas id = data-visualisation-3></canvas>
-            Data visualisation <br>
+                <table>
+                    <tr>
+                        <th id="income-table-head" colspan="13">Government Assurance Packages </th>
+                    </tr>
+                    <tr>
+                      <td>Cash payouts, vouchers and rebates</td>
+                      <td>-0.21</td>
+                    </tr>
+                    <tr>
+                        <td>Housing Grants</td>
+                        <td>-0.21</td>
+                      </tr>
+                      <tr>
+                        <td>Public Transport Benefits</td>
+                        <td>-0.21</td>
+                      </tr>
+                      <tr>
+                        <td>Childcare & Education Support</td>
+                        <td>-0.21</td>
+                      </tr>
+                      <tr>
+                        <td>Jobs Support & Unemployment Assistance</td>
+                        <td>-0.21</td>
+                      </tr>
+                    </table>
         </div>
 
         <div class = "content-text-box-4" id= "explanation-box-3">
@@ -195,5 +342,5 @@
     <div id="border"></div>
     
 
-
+</body>
 </html>

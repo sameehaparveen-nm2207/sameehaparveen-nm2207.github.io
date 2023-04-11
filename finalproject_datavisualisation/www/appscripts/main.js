@@ -9,39 +9,39 @@ function showFactor1Content() {
 //Plot chart when factor 1 is clicked
   
       //source: https://www.singstat.gov.sg/whats-new/latest-news/cpi-highlights
+      //modified file: https://docs.google.com/spreadsheets/d/1UKnH-ILWtK5s1iOT8yHdvkV8a6Ix9HTs3_c1lqPk5WI/gviz/tq?tqx=out:csv 
       
-      const labelYear = ["2019","2020","2021","2022"]//table[0].slice(1); //replace this with the appropriate values
-      //const labelBasket = table[1].slice(1); //replace this with the appropriate values
-      const dataObjs = {
-        labels: labelYear,
+      const labelYearallgoods = ["2015", "2016", "2017", "2018", "2019","2020","2021","2022"]
+      const allgoods = {
+        labels: labelYearallgoods,
         datasets: [
           {
             label: "All Items",
-            data: [0.6,-0.2,2.3,6.1],
+            data: [-0.5, -0.5, 0.6, 0.4,0.6,-0.2,2.3,6.1],
             borderWidth: 2,
             fill: false,
-            backgroundColor: "rgb(30,129,176)",
-            borderColor: "rgb(30,129,176)"
+            backgroundColor: "#3288bd",
+            borderColor: "#3288bd"
           },
           {
             label: "Food",
-            data: [1.5,1.9,1.4,5.3],
+            data: [1.9,2.1,1.4,1.4,1.5,1.9,1.4,5.3],
             borderWidth: 2,
             fill: false,
-            backgroundColor: "rgb(226,135,67)",
-            borderColor: "rgb(226,135,67)"
+            backgroundColor: "#f46d43",
+            borderColor: "#f46d43"
           },
           {
             label: "Clothing & Footwear",
-            data: [-0.8,-3.8,-5.5,2.8],
+            data: [0.1,0.2,0.6,1.4,-0.8,-3.8,-5.5,2.8],
             borderWidth: 2,
             fill: false,
-            backgroundColor: "rgb(234,182,118)",
-            borderColor: "rgb(234,182,118)"
+            backgroundColor: "#bf9b36",
+            borderColor: "#bf9b36"
           },
           {
             label: "Housing & Utilities",
-            data: [-1.0,-0.3,1.4,5.2],
+            data: [-3.5,-4.1,-2.5,-1.3,-1.0,-0.3,1.4,5.2],
             borderWidth: 2,
             fill: false,
             backgroundColor: "rgb(135,62,35)",
@@ -49,50 +49,50 @@ function showFactor1Content() {
           },
           {
             label: "Household Durables & Services",
-            data: [0.8,0.3,1.5,2.0],
+            data: [-0.6,1.8,1.1,0.8,0.8,0.3,1.5,2.0],
             borderWidth: 2,
             fill: false,
-            backgroundColor: "rgb(118,181,197)",
-            borderColor: "rgb(118,181,197)"
+            backgroundColor: "#46806e",
+            borderColor: "#46806e"
           },
           {
             label: "Health Care",
-            data: [1.1,-1.5,1.1,2.2],
+            data: [-0.1,1.1,2.5,2.0,1.1,-1.5,1.1,2.2],
             borderWidth: 2,
             fill: false,
-            backgroundColor: "rgb(171,219,227)",
-            borderColor: "rgb(171,219,227)"
-          },
-          {
-            label: "Transport",
-            data: [0.8,-0.7,8.8,16.4],
-            borderWidth: 2,
-            fill: false,
-            backgroundColor: "rgb(6,57,112)",
-            borderColor: "rgb(6,57,112)"
+            backgroundColor: "#5e4fa2",
+            borderColor: "#5e4fa2"
           },
           {
             label: "Communication",
-            data: [-0.9,0.7,-0.6,-1.2],
+            data: [0.3,-0.4,0.6,-1.0,-0.9,0.7,-0.6,-1.2],
             borderWidth: 2,
             fill: false,
-            backgroundColor: "rgb(6,57,112)",
-            borderColor: "rgb(6,57,112)"
+            backgroundColor: "#515731",
+            borderColor: "#515731"
           },
           {
             label: "Education",
-            data: [2.4,-0.6,1.3,2.1],
+            data: [3.4,3.1,3.0,2.9,2.4,-0.6,1.3,2.1],
             borderWidth: 2,
             fill: false,
-            backgroundColor: "rgb(6,57,112)",
-            borderColor: "rgb(6,57,112)"
+            backgroundColor: "#9e0142",
+            borderColor: "#9e0142"
+          },
+          {
+            label: "Recreation & Culture",
+            data: [0.3,0.9,0.3,1.2,1.1],
+            borderWidth: 2,
+            fill: false,
+            backgroundColor: "#74A16D",
+            borderColor: "#74A16D"
           },
         ],
       };
   
       new Chart("context-chart", {
         type: "line",
-        data: dataObjs,
+        data: allgoods,
         options: {
           maintainAspectRatio: false,
           legend: {
@@ -123,56 +123,117 @@ function showFactor1Content() {
         }
         },
       });
-    //});
   };
 
- //Update text when you click on factor 2
- function showFactor2Content() {
-  document.getElementById("info-box").innerHTML = '<div class="context-text-box-1" id="info-box">' +
-  '<div id = "graph-area">' + '<canvas id="context-chart"></canvas>'+ '</div>' + 
-  '<div id = "graph-explanation-area">'+ '<img src="resources/cpistats.jpg" height = "80px">' //img source: https://forums.tigsource.com/index.php?topic=72020.0
-  + '</div>';
+//Update text when you click on factor 4
+function showFactor4Content() {
+  document.getElementById("info-box").innerHTML = '<div class="context-text-box-1" id="info-box">' 
+  + '<canvas id="context-chart"></canvas>' + 
+  '</div>';
 
-//Plot chart when factor 2 is clicked
-  const data2 = fetch(
-    "https://2207-resources.s3.ap-southeast-1.amazonaws.com/sharing_deepfakes.csv" //replace this with the appropriate URL
-  )
-    .then(function (response) {
-      return response.text();
-    })
-    .then(function (data2) {
-      const table = [];
-      const rows = data2.split("\r\n"); //replace this with the appropriate values
+//Plot chart when factor 4 is clicked
   
-      //insert your forEach loop here
-      rows.forEach((r, index)=>{
-        const item = r.split(",");
-        table.push(item)
-      });
-      console.log(table);
-  
-      const labelCountry = table[0].slice(1); //replace this with the appropriate values
-      const beingOld = table[1].slice(1); //replace this with the appropriate values
-      const dataObj = {
-        labels: labelCountry,
+      //source: https://www.singstat.gov.sg/whats-new/latest-news/cpi-highlights
+      //modified file: https://docs.google.com/spreadsheets/d/1UKnH-ILWtK5s1iOT8yHdvkV8a6Ix9HTs3_c1lqPk5WI/gviz/tq?tqx=out:csv 
+      
+      const labelYearallgoods = ["2015", "2016", "2017", "2018", "2019","2020","2021","2022"]
+      const allgoods = {
+        labels: labelYearallgoods,
         datasets: [
           {
-            label: "Age",
-            data: beingOld,
+            label: "All Items",
+            data: [-0.5, -0.5, 0.6, 0.4,0.6,-0.2,2.3,6.1],
             borderWidth: 2,
-            backgroundColor: "#7552F2",
-            borderColor: "#7552F2",
+            fill: false,
+            backgroundColor: "#3288bd",
+            borderColor: "#3288bd"
+          },
+          {
+            label: "Food",
+            data: [1.9,2.1,1.4,1.4,1.5,1.9,1.4,5.3],
+            borderWidth: 2,
+            fill: false,
+            backgroundColor: "#f46d43",
+            borderColor: "#f46d43"
+          },
+          {
+            label: "Clothing & Footwear",
+            data: [0.1,0.2,0.6,1.4,-0.8,-3.8,-5.5,2.8],
+            borderWidth: 2,
+            fill: false,
+            backgroundColor: "#bf9b36",
+            borderColor: "#bf9b36"
+          },
+          {
+            label: "Housing & Utilities",
+            data: [-3.5,-4.1,-2.5,-1.3,-1.0,-0.3,1.4,5.2],
+            borderWidth: 2,
+            fill: false,
+            backgroundColor: "rgb(135,62,35)",
+            borderColor: "rgb(135,62,35)"
+          },
+          {
+            label: "Household Durables & Services",
+            data: [-0.6,1.8,1.1,0.8,0.8,0.3,1.5,2.0],
+            borderWidth: 2,
+            fill: false,
+            backgroundColor: "#46806e",
+            borderColor: "#46806e"
+          },
+          {
+            label: "Health Care",
+            data: [-0.1,1.1,2.5,2.0,1.1,-1.5,1.1,2.2],
+            borderWidth: 2,
+            fill: false,
+            backgroundColor: "#5e4fa2",
+            borderColor: "#5e4fa2"
+          },
+          
+          {
+            label: "Communication",
+            data: [0.3,-0.4,0.6,-1.0,-0.9,0.7,-0.6,-1.2],
+            borderWidth: 2,
+            fill: false,
+            backgroundColor: "#515731",
+            borderColor: "#515731"
+          },
+          {
+            label: "Education",
+            data: [3.4,3.1,3.0,2.9,2.4,-0.6,1.3,2.1],
+            borderWidth: 2,
+            fill: false,
+            backgroundColor: "#9e0142",
+            borderColor: "#9e0142"
+          },
+          {
+            label: "Recreation & Culture",
+            data: [0.3,0.9,0.3,1.2,1.1],
+            borderWidth: 2,
+            fill: false,
+            backgroundColor: "#74A16D",
+            borderColor: "#74A16D"
+          },
+          {
+            label: "Transport",
+            data: [-1.4,-2.4,2.6,-0.5,0.8,-0.7,8.8,16.4],
+            borderWidth: 2,
+            fill: false,
+            backgroundColor: "rgb(6,57,112)",
+            borderColor: "rgb(6,57,112)"
           },
         ],
       };
   
       new Chart("context-chart", {
-        type: "bar",
-        data: dataObj,
+        type: "line",
+        data: allgoods,
         options: {
           maintainAspectRatio: false,
           legend: {
-            display: false,
+            display: true,
+            labels: {
+              fontColor: "black"
+            }
           },
           scales: {
             xAxes: [{
@@ -188,144 +249,138 @@ function showFactor1Content() {
               },
             }],
           },
+         
           title: {
             display: true,
-            text: [
-              "Core Inflation Chart",
-            ],          
-            fontSize: 16,
-            fontColor: "black",
-            fontFamily: "TrebuchetMS",
-          },
+            text: ['Annual % Change In Consumer Price Index (CPI) Over Corresponding Period Of Previous Year, 2019 As Base Year'],
+            fontColor: 'black',
+        }
         },
       });
-    });
   };
 
+//Update text when you click on factor 2
+  function showFactor2Content() {
+    document.getElementById("info-box").innerHTML = '<div class="context-text-box-1" id="info-box">' 
+    + '<canvas id="context-chart"></canvas>' + 
+    '</div>';
+
+//Plot chart when factor 2 is clicked
+//source: https://www.singstat.gov.sg/whats-new/latest-news/cpi-highlights
+
+      const labelYearcoreinflation = ["2015", "2016", "2017", "2018", "2019","2020","2021","2022"]; 
+      const coreinflation = {
+        labels: labelYearcoreinflation,
+        datasets: [
+          {
+            label: "All Items Less Accommodation",
+            data: [-0.1,0.3,1.8,1.4,0.9,-0.3,2.5,6.6],
+            borderWidth: 2,
+            fill: false,
+            backgroundColor: "#2f1c4b",
+            borderColor: "#2f1c4b"
+          },
+        ],
+      };
+  
+      new Chart("context-chart", {
+        type: "line",
+        data: coreinflation,
+        options: {
+          maintainAspectRatio: false,
+          legend: {
+            display: true,
+            labels: {
+              fontColor: "black"
+            }
+          },
+          scales: {
+            xAxes: [{
+              ticks: {
+                fontColor: "black", 
+                fontFamily: "TrebuchetMS",
+              },
+            }],
+            yAxes: [{
+              ticks: {
+                fontColor: "black", 
+                fontFamily: "TrebuchetMS",
+              },
+            }],
+          },
+         
+          title: {
+            display: true,
+            text: ['Annual % Change In Consumer Price Index (CPI) Over Corresponding Period Of Previous Year, 2019 As Base Year'],
+            fontColor: 'black',
+          }
+        },
+      });
+  };
+
+ //Update text when you click on factor 3
   function showFactor3Content() {
     document.getElementById("info-box").innerHTML = '<div class="context-text-box-1" id="info-box">' 
-    + '<canvas id="context-chart"></canvas>'+ 
+    + '<canvas id="context-chart"></canvas>' + 
     '</div>';
+
+//Plot chart when factor 3 is clicked
+//source: https://www.singstat.gov.sg/whats-new/latest-news/cpi-highlights
+//modified file: https://docs.google.com/spreadsheets/d/1UKnH-ILWtK5s1iOT8yHdvkV8a6Ix9HTs3_c1lqPk5WI/gviz/tq?tqx=out:csv 
   
-  //Plot chart when factor 3 is clicked
-    
-        //source: https://www.singstat.gov.sg/whats-new/latest-news/cpi-highlights
-        
-        const labelYears = ["2019","2020","2021","2022"]//table[0].slice(1); //replace this with the appropriate values
-        //const labelBasket = table[1].slice(1); //replace this with the appropriate values
-        const dataObjss = {
-          labels: labelYears,
-          datasets: [
-            {
-              label: "All Items",
-              data: [0.6,-0.2,2.3,6.1],
-              borderWidth: 2,
-              fill: false,
-              backgroundColor: "rgb(30,129,176)",
-              borderColor: "rgb(30,129,176)"
-            },
-            {
-              label: "Food",
-              data: [1.5,1.9,1.4,5.3],
-              borderWidth: 2,
-              fill: false,
-              backgroundColor: "rgb(226,135,67)",
-              borderColor: "rgb(226,135,67)"
-            },
-            {
-              label: "Clothing & Footwear",
-              data: [-0.8,-3.8,-5.5,2.8],
-              borderWidth: 2,
-              fill: false,
-              backgroundColor: "rgb(234,182,118)",
-              borderColor: "rgb(234,182,118)"
-            },
-            {
-              label: "Housing & Utilities",
-              data: [-1.0,-0.3,1.4,5.2],
-              borderWidth: 2,
-              fill: false,
-              backgroundColor: "rgb(135,62,35)",
-              borderColor: "rgb(135,62,35)"
-            },
-            {
-              label: "Household Durables & Services",
-              data: [0.8,0.3,1.5,2.0],
-              borderWidth: 2,
-              fill: false,
-              backgroundColor: "rgb(118,181,197)",
-              borderColor: "rgb(118,181,197)"
-            },
-            {
-              label: "Health Care",
-              data: [1.1,-1.5,1.1,2.2],
-              borderWidth: 2,
-              fill: false,
-              backgroundColor: "rgb(171,219,227)",
-              borderColor: "rgb(171,219,227)"
-            },
-            {
-              label: "Transport",
-              data: [0.8,-0.7,8.8,16.4],
-              borderWidth: 2,
-              fill: false,
-              backgroundColor: "rgb(6,57,112)",
-              borderColor: "rgb(6,57,112)"
-            },
-            {
-              label: "Communication",
-              data: [-0.9,0.7,-0.6,-1.2],
-              borderWidth: 2,
-              fill: false,
-              backgroundColor: "rgb(6,57,112)",
-              borderColor: "rgb(6,57,112)"
-            },
-            {
-              label: "Education",
-              data: [2.4,-0.6,1.3,2.1],
-              borderWidth: 2,
-              fill: false,
-              backgroundColor: "rgb(6,57,112)",
-              borderColor: "rgb(6,57,112)"
-            },
-          ],
-        };
-    
-        new Chart("context-chart", {
-          type: "line",
-          data: dataObjss,
-          options: {
-            maintainAspectRatio: false,
-            legend: {
-              display: true,
-              labels: {
-                fontColor: "black"
-              }
-            },
-            scales: {
-              xAxes: [{
-                ticks: {
-                  fontColor: "black", 
-                  fontFamily: "TrebuchetMS",
-                },
-              }],
-              yAxes: [{
-                ticks: {
-                  fontColor: "black", 
-                  fontFamily: "TrebuchetMS",
-                },
-              }],
-            },
-           
-            title: {
-              display: true,
-              text: ['Annual % Change In Consumer Price Index (CPI) Over Corresponding Period Of Previous Year, 2019 As Base Year'],
-              fontColor: 'black',
-          }
+
+      const labelYearoverallinflation = ["2015", "2016", "2017", "2018", "2019","2020","2021","2022"]; 
+      const overallinflation = {
+        labels: labelYearoverallinflation,
+        datasets: [
+          {
+            label: "All Items",
+            data: [-0.5, -0.5, 0.6, 0.4,0.6,-0.2,2.3,6.1],
+            borderWidth: 2,
+            fill: false,
+            backgroundColor: "#3288bd",
+            borderColor: "#3288bd"
           },
-        });
-      //});
-    };
+        ],
+      };
+  
+      new Chart("context-chart", {
+        type: "line",
+        data: overallinflation,
+        options: {
+          maintainAspectRatio: false,
+          legend: {
+            display: true,
+            labels: {
+              fontColor: "black"
+            }
+          },
+          scales: {
+            xAxes: [{
+              ticks: {
+                fontColor: "black", 
+                fontFamily: "TrebuchetMS",
+              },
+            }],
+            yAxes: [{
+              ticks: {
+                fontColor: "black", 
+                fontFamily: "TrebuchetMS",
+              },
+            }],
+          },
+         
+          title: {
+            display: true,
+            text: ['Annual % Change In Consumer Price Index (CPI) Over Corresponding Period Of Previous Year, 2019 As Base Year'],
+            fontColor: 'black',
+          }
+        },
+      });
+  };
+
+  //--------------------------------------------------------------------------------------------------------------------------------------//
+
     //Generate Income Percentile
    
     function generateincomedecile() {
@@ -355,92 +410,79 @@ function showFactor1Content() {
       }
       
     }
+//--------------------------------------------------------------------------------------------------------------------------------------//
 
+                                             //2.Data Visualisation on average household income
 
-   //2.Data Visualisation on average household income
-    const labelYears = ["2019","2020","2021","2022"]//table[0].slice(1); //replace this with the appropriate values
-        //const labelBasket = table[1].slice(1); //replace this with the appropriate values
-        const dataObjss = {
-          labels: labelYears,
+//---------------------------------------------------INCOME GROWTH GRAPH: LOW INCOME ---------------------------------------------------------
+
+  //Update income-growth-graph when you click on low-income
+  function showlowincomegrowthcontent() {
+  document.getElementById("growth-box").innerHTML = '<div class="context-text-box-2" id="growth-box">' 
+  + '<canvas id="income-growth-graph"></canvas>' + 
+  '</div>';
+
+  //Plot chart when low-income is clicked
+  //source: https://tablebuilder.singstat.gov.sg/table/CT/17820
+
+    const labelYearslowincomegrowthdata = ["2015", "2016", "2017", "2018", "2019","2020","2021","2022"]
+    const lowincomegrowthdata = {
+          labels: labelYearslowincomegrowthdata,
           datasets: [
             {
-              label: "All Items",
-              data: [0.6,-0.2,2.3,6.1],
+              label: "Total",
+              data: [10515,10493,10920,11016,11250,11111,11137,11906],
               borderWidth: 2,
               fill: false,
-              backgroundColor: "rgb(30,129,176)",
-              borderColor: "rgb(30,129,176)"
+              backgroundColor: "#643c6a",
+              borderColor: "#643c6a"
             },
             {
-              label: "Food",
-              data: [1.5,1.9,1.4,5.3],
+              label: "1st Decile",
+              data: [1745,1732,1763,1785,1858,1805,1858,2104],
               borderWidth: 2,
               fill: false,
-              backgroundColor: "rgb(226,135,67)",
-              borderColor: "rgb(226,135,67)"
+              backgroundColor: "#932525",
+              borderColor: "#932525"
             },
             {
-              label: "Clothing & Footwear",
-              data: [-0.8,-3.8,-5.5,2.8],
+              label: "2nd Decile",
+              data: [3402,3486,3512,3574,3692,3839,3892,4110],
               borderWidth: 2,
               fill: false,
-              backgroundColor: "rgb(234,182,118)",
-              borderColor: "rgb(234,182,118)"
+              backgroundColor: "#D57617",
+              borderColor: "#D57617"
             },
             {
-              label: "Housing & Utilities",
-              data: [-1.0,-0.3,1.4,5.2],
+              label: "3rd Decile",
+              data: [4965,5040,5158,5174,5237,5190,5192,5659],
               borderWidth: 2,
               fill: false,
-              backgroundColor: "rgb(135,62,35)",
-              borderColor: "rgb(135,62,35)"
+              backgroundColor: "#DBBD23",
+              borderColor: "#DBBD23"
             },
             {
-              label: "Household Durables & Services",
-              data: [0.8,0.3,1.5,2.0],
+              label: "4th Decile",
+              data: [6262,6434,6554,6762,6903,6955,7223,7471],
               borderWidth: 2,
               fill: false,
-              backgroundColor: "rgb(118,181,197)",
-              borderColor: "rgb(118,181,197)"
+              backgroundColor: "#41784A",
+              borderColor: "#41784A"
             },
             {
-              label: "Health Care",
-              data: [1.1,-1.5,1.1,2.2],
+              label: "5th Decile",
+              data: [7746,7856,8254,8413,8708,8648,8890,9316],
               borderWidth: 2,
               fill: false,
-              backgroundColor: "rgb(171,219,227)",
-              borderColor: "rgb(171,219,227)"
-            },
-            {
-              label: "Transport",
-              data: [0.8,-0.7,8.8,16.4],
-              borderWidth: 2,
-              fill: false,
-              backgroundColor: "rgb(6,57,112)",
-              borderColor: "rgb(6,57,112)"
-            },
-            {
-              label: "Communication",
-              data: [-0.9,0.7,-0.6,-1.2],
-              borderWidth: 2,
-              fill: false,
-              backgroundColor: "rgb(6,57,112)",
-              borderColor: "rgb(6,57,112)"
-            },
-            {
-              label: "Education",
-              data: [2.4,-0.6,1.3,2.1],
-              borderWidth: 2,
-              fill: false,
-              backgroundColor: "rgb(6,57,112)",
-              borderColor: "rgb(6,57,112)"
+              backgroundColor: "#3E4F70",
+              borderColor: "#3E4F70"
             },
           ],
         };
     
-        new Chart("data-visualisation-1", {
+        new Chart("income-growth-graph", {
           type: "line",
-          data: dataObjss,
+          data: lowincomegrowthdata,
           options: {
             maintainAspectRatio: false,
             legend: {
@@ -466,53 +508,89 @@ function showFactor1Content() {
            
             title: {
               display: true,
-              text: ['Annual % Change In Consumer Price Index (CPI) Over Corresponding Period Of Previous Year, 2019 As Base Year'],
+              text: ['Lower Income Group - Average Monthly Household Income from Work (SGD)'],
               fontColor: 'black',
           }
           },
         });
-      //});
+      };
+    
+    //---------------------------------------------------INCOME GROWTH GRAPH: HIGH INCOME ---------------------------------------------------------
 
-      //3.	Data Visualisation on average household expenditure
-      const data3 = fetch(
-        "https://2207-resources.s3.ap-southeast-1.amazonaws.com/sharing_deepfakes.csv" //replace this with the appropriate URL
-      )
-        .then(function (response) {
-          return response.text();
-        })
-        .then(function (data3) {
-          const table = [];
-          const rows = data3.split("\r\n"); //replace this with the appropriate values
-      
-          //insert your forEach loop here
-          rows.forEach((r, index)=>{
-            const item = r.split(",");
-            table.push(item)
-          });
-          console.log(table);
-      
-          const labelCountry = table[0].slice(1); //replace this with the appropriate values
-          const beingOld = table[1].slice(1); //replace this with the appropriate values
-          const dataObj = {
-            labels: labelCountry,
+    //Update income-growth-graph when you click on high-income
+    function showhighincomegrowthcontent() {
+    document.getElementById("growth-box").innerHTML = '<div class="context-text-box-2" id="growth-box">' 
+    + '<canvas id="income-growth-graph"></canvas>' + 
+    '</div>';
+  
+    //Plot chart when low-income is clicked
+    //source: https://tablebuilder.singstat.gov.sg/table/CT/17820
+  
+      const labelYearshighincomegrowthdata = ["2015", "2016", "2017", "2018", "2019","2020","2021","2022"]
+      const highincomegrowthdata = {
+            labels: labelYearshighincomegrowthdata,
             datasets: [
               {
-                label: "Age",
-                data: beingOld,
+                label: "Total",
+                data: [10515,10493,10920,11016,11250,11111,11137,11906],
                 borderWidth: 2,
-                backgroundColor: "#7552F2",
-                borderColor: "#7552F2",
+                fill: false,
+                backgroundColor: "#643c6a",
+                borderColor: "#643c6a"
+              },
+              {
+                label: "6th Decile",
+                data: [9480,9636,9736,10106,10402,10204,10749,11210],
+                borderWidth: 2,
+                fill: false,
+                backgroundColor: "#932525",
+                borderColor: "#932525"
+              },
+              {
+                label: "7th Decile",
+                data: [11323,11421,12042,12153,12454,12383,12698,13307],
+                borderWidth: 2,
+                fill: false,
+                backgroundColor: "#D57617",
+                borderColor: "#D57617"
+              },
+              {
+                label: "8th Decile",
+                data: [13519,13765,14351,14588,15139,14626,15093,16135],
+                borderWidth: 2,
+                fill: false,
+                backgroundColor: "#DBBD23",
+                borderColor: "#DBBD23"
+              },
+              {
+                label: "9th Decile",
+                data: [16848,17188,17809,18407,18631,18215,18629,20204],
+                borderWidth: 2,
+                fill: false,
+                backgroundColor: "#41784A",
+                borderColor: "#41784A"
+              },
+              {
+                label: "10th Decile",
+                data: [29860,28377,30018,29197,29474,29246,27149,29542],
+                borderWidth: 2,
+                fill: false,
+                backgroundColor: "#3E4F70",
+                borderColor: "#3E4F70"
               },
             ],
           };
       
-          new Chart("data-visualisation-3", {
-            type: "bar",
-            data: dataObj,
+          new Chart("income-growth-graph", {
+            type: "line",
+            data: highincomegrowthdata,
             options: {
               maintainAspectRatio: false,
               legend: {
-                display: false,
+                display: true,
+                labels: {
+                  fontColor: "black"
+                }
               },
               scales: {
                 xAxes: [{
@@ -528,59 +606,207 @@ function showFactor1Content() {
                   },
                 }],
               },
+             
               title: {
                 display: true,
-                text: [
-                  "GST Chart",
-                ],          
-                fontSize: 16,
-                fontColor: "black",
-                fontFamily: "TrebuchetMS",
-              },
+                text: ['Higher Income Group - Average Monthly Household Income from Work (SGD)'],
+                fontColor: 'black',
+            }
             },
           });
-        });
+        };
+
+//---------------------------------------------------INCOME CHANGE GRAPH: HIGH INCOME ---------------------------------------------------------        
+//Update income-change-graph when you click on high-income
+        function showhighincomechangecontent() {
+          document.getElementById("change-box").innerHTML = '<div class="content-text-box-2" id="change-box">' 
+          + '<canvas id="income-change-graph"></canvas>' + 
+          '</div>';
+        
+          //Plot chart when low-income is clicked
+          //source: https://tablebuilder.singstat.gov.sg/table/CT/17820
+        
+            const labelYearshighincomechange = ["2016", "2017", "2018", "2019","2020","2021","2022"]
+            const highincomechangedata = {
+                  labels: labelYearshighincomechange,
+                  datasets: [
+                    {
+                      label: "Inflation Rate",
+                      data: [-0.50,0.60,0.40,0.60,-0.20,2.30,6.10],
+                      borderWidth: 2,
+                      fill: false,
+                      backgroundColor: "#E136A7",
+                      borderColor: "#E136A7"
+                    },
+                    {
+                      label: "Total",
+                      data: [-0.209, 4.069, 0.879, 2.124, -1.236, 0.234, 6.905],
+                      borderWidth: 2,
+                      fill: false,
+                      backgroundColor: "#643c6a",
+                      borderColor: "#643c6a"
+                    },
+                    {
+                      label: "6th Decile",
+                      data: [1.646, 1.038, 3.800, 2.292, -1.903, 5.341, 4.289],
+                      borderWidth: 2,
+                      fill: false,
+                      backgroundColor: "#932525",
+                      borderColor: "#932525"
+                    },
+                    {
+                      label: "7th Decile",
+                      data: [0.865,5.437,0.922,2.477,-0.570,2.544,4.796],
+                      borderWidth: 2,
+                      fill: false,
+                      backgroundColor: "#D57617",
+                      borderColor: "#D57617"
+                    },
+                    {
+                      label: "8th Decile",
+                      data: [1.820,4.257,1.651,3.777,-3.389,3.193,6.904],
+                      borderWidth: 2,
+                      fill: false,
+                      backgroundColor: "#DBBD23",
+                      borderColor: "#DBBD23"
+                    },
+                    {
+                      label: "9th Decile",
+                      data: [2.018,3.613,3.358,1.217,-2.233,2.273,8.455],
+                      borderWidth: 2,
+                      fill: false,
+                      backgroundColor: "#41784A",
+                      borderColor: "#41784A"
+                    },
+                    {
+                      label: "10th Decile",
+                      data: [-4.967,5.783,-2.735,0.949,-0.774,-7.170,8.814],
+                      borderWidth: 2,
+                      fill: false,
+                      backgroundColor: "#3E4F70",
+                      borderColor: "#3E4F70"
+                    },
+                  ],
+                };
+            
+                new Chart("income-change-graph", {
+                  type: "line",
+                  data: highincomechangedata,
+                  options: {
+                    maintainAspectRatio: false,
+                    legend: {
+                      display: true,
+                      labels: {
+                        fontColor: "black"
+                      }
+                    },
+                    scales: {
+                      xAxes: [{
+                        ticks: {
+                          fontColor: "black", 
+                          fontFamily: "TrebuchetMS",
+                        },
+                      }],
+                      yAxes: [{
+                        ticks: {
+                          fontColor: "black", 
+                          fontFamily: "TrebuchetMS",
+                        },
+                      }],
+                    },
+                   
+                    title: {
+                      display: true,
+                      text: ['Higher Income Group - Yearly % Change in Average Monthly Household Income from Work (SGD)'],
+                      fontColor: 'black',
+                  }
+                  },
+                });
+              };
+
+//---------------------------------------------------INCOME CHANGE GRAPH: LOW INCOME ---------------------------------------------------------
+    //Update income-change-graph when you click on low-income
+    function showlowincomechangecontent() {
+      document.getElementById("change-box").innerHTML = '<div class="content-text-box-2" id="change-box">' 
+      + '<canvas id="income-change-graph"></canvas>' + 
+      '</div>';
     
-        //3.	Data Visualisation on average household expenditure
-        const data4 = fetch(
-          "https://2207-resources.s3.ap-southeast-1.amazonaws.com/sharing_deepfakes.csv" //replace this with the appropriate URL
-        )
-          .then(function (response) {
-            return response.text();
-          })
-          .then(function (data4) {
-            const table = [];
-            const rows = data4.split("\r\n"); //replace this with the appropriate values
-        
-            //insert your forEach loop here
-            rows.forEach((r, index)=>{
-              const item = r.split(",");
-              table.push(item)
-            });
-            console.log(table);
-        
-            const labelCountry = table[0].slice(1); //replace this with the appropriate values
-            const beingOld = table[1].slice(1); //replace this with the appropriate values
-            const dataObj = {
-              labels: labelCountry,
+      //Plot chart when low-income is clicked
+      //source: https://tablebuilder.singstat.gov.sg/table/CT/17820
+    
+        const labelYearslowincomechange = ["2016", "2017", "2018", "2019","2020","2021","2022"]
+        const lowincomechangedata = {
+              labels: labelYearslowincomechange,
               datasets: [
                 {
-                  label: "Age",
-                  data: beingOld,
+                  label: "Inflation Rate",
+                  data: [-0.50,0.60,0.40,0.60,-0.20,2.30,6.10],
                   borderWidth: 2,
-                  backgroundColor: "#7552F2",
-                  borderColor: "#7552F2",
+                  fill: false,
+                  backgroundColor: "#E136A7",
+                  borderColor: "#E136A7"
+                },
+                {
+                  label: "Total",
+                  data: [-0.209, 4.069, 0.879, 2.124, -1.236, 0.234, 6.905],
+                  borderWidth: 2,
+                  fill: false,
+                  backgroundColor: "#643c6a",
+                  borderColor: "#643c6a"
+                },
+                {
+                  label: "1st Decile",
+                  data: [-0.745,1.790,1.248,4.090,-2.853,2.936,13.240],
+                  borderWidth: 2,
+                  fill: false,
+                  backgroundColor: "#932525",
+                  borderColor: "#932525"
+                },
+                {
+                  label: "2nd Decile",
+                  data: [2.469,0.746,1.765,3.302,3.982,1.381,5.601],
+                  borderWidth: 2,
+                  fill: false,
+                  backgroundColor: "#D57617",
+                  borderColor: "#D57617"
+                },
+                {
+                  label: "3rd Decile",
+                  data: [1.511,2.341,0.310,1.218,-0.897,0.039,8.995],
+                  borderWidth: 2,
+                  fill: false,
+                  backgroundColor: "#DBBD23",
+                  borderColor: "#DBBD23"
+                },
+                {
+                  label: "4th Decile",
+                  data: [2.747,1.865,3.174,2.085,0.753,3.853,3.433],
+                  borderWidth: 2,
+                  fill: false,
+                  backgroundColor: "#41784A",
+                  borderColor: "#41784A"
+                },
+                {
+                  label: "5th Decile",
+                  data: [1.420,5.066,1.926,3.506,-0.689,2.789,4.792],
+                  borderWidth: 2,
+                  fill: false,
+                  backgroundColor: "#3E4F70",
+                  borderColor: "#3E4F70"
                 },
               ],
             };
         
-            new Chart("data-visualisation-2", {
-              type: "bar",
-              data: dataObj,
+            new Chart("income-change-graph", {
+              type: "line",
+              data: lowincomechangedata,
               options: {
                 maintainAspectRatio: false,
                 legend: {
-                  display: false,
+                  display: true,
+                  labels: {
+                    fontColor: "black"
+                  }
                 },
                 scales: {
                   xAxes: [{
@@ -596,16 +822,157 @@ function showFactor1Content() {
                     },
                   }],
                 },
+               
                 title: {
                   display: true,
-                  text: [
-                    "GST Chart",
-                  ],          
-                  fontSize: 16,
-                  fontColor: "black",
-                  fontFamily: "TrebuchetMS",
-                },
+                  text: ['Lower Income Group - Yearly % Change in Average Monthly Household Income from Work (SGD)'],
+                  fontColor: 'black',
+              }
               },
             });
-          });
-      
+          };
+
+//---------------------------------------------------HOUSEHOLD EXPENDITURE PIE CHART ---------------------------------------------------------
+//source: https://tablebuilder.singstat.gov.sg/table/TS/M212981
+
+const categoryofgoods = ["Food", "Healthcare", "Transport", "Communication","Recreation & Culture","Educational Services","Accommodation Services","Others"]
+const householdexpenditure = [1198.9, 323.1, 781.2,240.4,378.6,339.2,69.8,744.2]
+const chartColors = [
+  "#74A16D",
+  "#212C57",
+  "#733E6A",
+  "#DA7C76",
+  "#FFDB9C",
+  "#BA4E6F",
+  "#77ACBA",
+  "#e8c3b9",]
+
+    new Chart("expenditure-pie-chart", {
+      type: "doughnut",
+      data: {
+        labels: categoryofgoods,
+        datasets: [{
+          backgroundColor: chartColors,
+          data: householdexpenditure
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Proportion of Monthly Income Spent on Different Goods",
+          fontColor: "black",
+          
+          fontSize: 14,
+        },
+
+        legend: {
+          labels: {
+            fontColor: "black",
+            fontSize: 14
+          }
+        }
+        
+      }
+    });
+  //---------------------------------------------------FINFLATION RATE COMPARISION CHART ---------------------------------------------------------
+
+    const labelYearinflationcompare = ["2018", "2019","2020","2021","2022"]
+      const inflationcompare = {
+        labels: labelYearinflationcompare,
+        datasets: [
+          {
+            label: "Food",
+            data: [1.4,1.5,1.9,1.4,5.3],
+            borderWidth: 2,
+            fill: true,
+            backgroundColor: "#f46d43",
+            borderColor: "#f46d43"
+          },
+          {
+            label: "Housing & Utilities",
+            data: [-1.3,-1.0,-0.3,1.4,5.2],
+            borderWidth: 2,
+            fill: true,
+            backgroundColor: "rgb(135,62,35)",
+            borderColor: "rgb(135,62,35)"
+          },
+          {
+            label: "Health Care",
+            data: [2.0,1.1,-1.5,1.1,2.2],
+            borderWidth: 2,
+            fill: true,
+            backgroundColor: "#5e4fa2",
+            borderColor: "#5e4fa2"
+          },
+          {
+            label: "Communication",
+            data: [-1.0,-0.9,0.7,-0.6,-1.2],
+            borderWidth: 2,
+            fill: true,
+            backgroundColor: "#515731",
+            borderColor: "#515731"
+          },
+          {
+            label: "Education",
+            data: [2.9,2.4,-0.6,1.3,2.1],
+            borderWidth: 2,
+            fill: true,
+            backgroundColor: "#9e0142",
+            borderColor: "#9e0142"
+          },
+          {
+            label: "Recreation & Culture",
+            data: [1.2,1.1,-1.8,1.0,4.3],
+            borderWidth: 2,
+            fill: true,
+            backgroundColor: "#74A16D",
+            borderColor: "#74A16D"
+          },
+          {
+            label: "Transport",
+            data: [-0.5,0.8,-0.7,8.8,16.4],
+            borderWidth: 2,
+            fill: true,
+            backgroundColor: "rgb(6,57,112)",
+            borderColor: "rgb(6,57,112)"
+          },
+        ],
+      };
+  
+      new Chart("inflation-bar-chart", {
+        type: "bar",
+        data: inflationcompare,
+        options: {
+          maintainAspectRatio: false,
+          legend: {
+            display: true,
+            labels: {
+              fontColor: "black"
+            }
+          },
+          scales: {
+            
+            xAxes: [{
+              ticks: {
+                fontColor: "black", 
+                fontFamily: "TrebuchetMS",
+                
+              },
+            }],
+            yAxes: [{
+              ticks: {
+                fontColor: "black", 
+                fontFamily: "TrebuchetMS",
+              },
+            }],
+          },
+         
+          title: {
+            display: true,
+            text: ['Inflation Rates of Individual Categories from 2018 to 2022'],
+            fontColor: 'black',
+        }
+        },
+      });
+
+    

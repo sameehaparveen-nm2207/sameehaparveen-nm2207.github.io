@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 @import url('https://fonts.cdnfonts.com/css/games');
 
+/*-----------------------------------------------------------General Formatting-----------------------------------------------------------*/
 body,html{
 	height: 100%;
     width: 100%;
     margin: 0;
     padding:0;
-    
 }
 
 html {
@@ -23,7 +23,8 @@ legend {
   }
 
 .src-link{
-    font-size: 14px
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
 }
   
 /*Add black border between sections*/
@@ -34,7 +35,8 @@ legend {
     padding: 0;
 }
 
-/*Title Header*/
+/*------------------------------------------------------------ Title Bar --------------------------------------------------------------*/
+
 #title-bar{
 	background-color: #7552F2;
     height: 150px;
@@ -51,28 +53,7 @@ legend {
     color: white;
 }
 
-#fun-fact{
-    background-color: #5797D7;
-    height: 200px;
-    margin: 0;
-    padding: 0;  
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    text-align: center;
-    justify-content: center;
-    align-items: center;   
-    font-family: 'Press Start 2P', cursive;
-    color: black;
-    font-size: 14px
-}
-
-#result-percentile{
-    color: white
-}
-
-/*Inflation Section*/
+/****************************************************** Inflation Section***************************************************************/
 #context-title{
 	background-color:#9CAEF7;	
 	height:30px;
@@ -86,7 +67,6 @@ legend {
     align-items: center;
 }
 
-/*Click to explore factors*/
 #context-instructions{
 	background-color:#9CAEF7;	
 	height:30px;
@@ -101,7 +81,16 @@ legend {
     font-size: 12px
 }
 
-/*Entire area with graph and factor boxes*/
+.content-text-box-1 {
+	background-color: #9CAEF7;	
+    width: 100%;
+    height: 100%;
+    margin: 5px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/*--------------------------------------------------------- Inflation Graph-----------------------------------------------------------*/
 #context-text-area{
 	background-color: #9CAEF7;	
 	height:500px;
@@ -115,89 +104,86 @@ legend {
     text-align: center;
     justify-content: center;
     align-items: center;
-
 }
 
-
-.content-text-box-1 {
-	background-color: #9CAEF7;	
-    width: 100%;
-    height: 100%;
-    margin: 5px 10px;
+#info-box {
+    background-color: #dfe6fb;
+    flex: 2;
+    margin: 5px;
     padding-left: 10px;
     padding-right: 10px;
-   
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-    /*Info box on the left*/
-    #info-box {
-        background-color: #CDD6FB;
-        flex: 2;
-        margin: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        display: flex; 
-        flex-direction: column;
-        justify-content: space-between;
-    }
+#context-chart{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+}
+/*------------------------------------------------------------Factor Buttons---------------------------------------------------------*/
 
-        #graph-area{
-            flex: 2;
-            font-family: 'Press Start 2P', cursive;
-            color: black;
+#factors-box {
+    flex: 1;
+    height: 350px;
+    margin: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-        
-        }
+.list-of-factors {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Press Start 2P', cursive;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 3px solid black;
+    background-color: #7890F4;
+    font-size:12px;
+    line-height:1.4;
+}
 
-            #context-chart{
-                font-family: 'Press Start 2P', cursive;
-                font-size: 16px;
-                width: 100%;
-                height: 100%;
-            }
+/*------------------------------------------------------------Factor Buttons---------------------------------------------------------*/
+/****************************************************** End of Inflation Section***************************************************************/
 
-        #graph-explanation-area{
-            flex: 1;
-            font-family:'Montserrat', sans-serif;
-            font-weight: 600;
-            color: black;
-            font-size: 14px;
-            
-        }
-    
-
-    
-
-    /*Factors box on the right*/
-    #factors-box {
-        flex: 1;
-        height: 250px;
-        margin: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        display: flex; 
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-        .list-of-factors {
+/****************************************************** Income Percentile Section***************************************************************/
+#fun-fact{
+            background-color: #5797D7;
+            height: 200px;
+            margin: 0;
+            padding: 0;  
             display: flex;
             flex-direction: column;
-            font-family: 'Press Start 2P', cursive;
-            color: black;
+            flex-wrap: nowrap;
+            justify-content: space-between;
             text-align: center;
             justify-content: center;
-            align-items: center;
-            height: 50px;
-            border: 3px solid black;
-            background-color: #7890F4;
+            align-items: center;   
+            font-family: 'Press Start 2P', cursive;
+            color: black;
+            font-size: 14px
         }
+        
+        #result-percentile{
+            color: white
+        }
+/*************************************************** End of Income Percentile Section***************************************************************/
 
-/*Income vs Increase in CPI Comparison*/
-  #income-vs-cpi-title{
+
+/***********************************************Income vs Increase in CPI Comparison Section************************************************/
+/*--------------------------------------------------------------Title Bar-----------------------------------------------------------*/
+#income-vs-cpi-title{
 	background-color: #9677C3;	
 	height:30px;
     padding-top: 15px;
@@ -208,59 +194,101 @@ legend {
     text-align: center;
     justify-content: center;
     align-items: center;
+    padding-bottom: 20px;
 }
+/*------------------------------------------------------High & Low Income Buttons---------------------------------------------------*/
+#high-low-income {
+    flex: 1;
+    height: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #9677C3;
+    color: white;
+    padding-bottom:15px;
+  }
+  
+  .income-change {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border: 3px solid black;
+    background-color: #382555;
+    margin: 0 10px;
+    padding: 0 15px;
+  }
 
-#income-vs-cpi-content{
+/*-----------------------------------------------------Income Growth & Change Graphs-------------------------------------------------*/
+#income-vs-cpi-content-1{
 	background-color: #9677C3;	
-	height:400px;
-    margin: 0;
-    padding: 0;
+	height:380px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    padding: 10px;
+    align-items: center;
 }
 
 .content-text-box-2 {
 	background-color: #9677C3;	
-    width: 90%;
-    height: 350px;
+    width: 93%;
+    height: 380px;
     margin: 5px 10px;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-    #data-box-1 {
-        flex: 2;
-        height: 350px;
-        margin: 5px;
+.placeholder-text{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    text-align: center;
+    
+}
+    #growth-box {
+        flex: 1;
+        height: 380px;
         padding-left: 10px;
         padding-right: 10px;
         text-align: center;
         justify-content: center;
         align-items: center;
-        font-family:'Montserrat', sans-serif;
-        font-weight: 600;
         color: black;
         font-size: 16px;
+        background-color: #e4dded;
     }
 
-    #explanation-box-1 {
-        flex: 2;
-        height: 350px;
-        margin: 5px;
+    #change-box {
+        flex: 1;
+        height: 380px;
         padding-left: 10px;
         padding-right: 10px;
         text-align: center;
         justify-content: center;
         align-items: center;
-        font-family:'Montserrat', sans-serif;
-        font-weight: 600;
         color: black;
         font-size: 16px;
+        background-color: #e4dded;
     }
 
+    #change-box canvas#income-change-graph {
+        margin-top: -5px;
+      }
+
+    /*-----------------------------------------------Income Change vs Inflaton Rate Table-------------------------------------------------*/
+    #income-vs-cpi-content-2{
+        background-color: #9677C3;	
+        
+        padding: 20px;
+        margin-top: 0;
+    }
     
     table{
         font-size:14px;
@@ -273,19 +301,80 @@ legend {
         border:3px solid black;
         text-align: center;
         padding: 4px;
-        
+        font-family: 'Press Start 2P', cursive;
+        font-size: 10px;
+        font-weight: 100;
+        padding-top: 10px;
       }
-      
-      th {
+
+    th {
         border: 3px solid black;
         text-align: center;
         padding: 4px;
-        
+      }
+
+      #income-table-head{
+        background-color:#261939;
+        color:#F4F1F9;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 12px;
+        font-weight: 100;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      #decile-header{
+        background-color:#f4f1f9;
+        color: #261939;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border: 3px solid black;
+        text-align: center;
+        font-weight: 100;
+      }
+
+      .year-column{
+        background-color:#261939;
+        color: #f4f1f9;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      .inflation-rate{
+        background-color:#E9E2F3;
+        color: black;
       }
    
+      .greater-than{
+        background-color:#c9edc4;
+        color: black;
+      }
 
-/*Next Data Comparison*/
-#factor-vs-factor-title-1{
+      .smaller-than{
+        background-color:#f6bac0;
+        color: black;
+      }
+/*-----------------------------------------------Income Change vs Inflaton Rate Explanation-------------------------------------------------*/
+
+      .income-inflation-explanation{
+        font-family: 'Press Start 2P', cursive;
+        color:black;
+        font-size: 11px;
+        line-height: 1.8;
+        background-color: #eee7f8;
+        padding: 10px;
+      }
+
+/*********************************************End of Income vs Increase in CPI Comparison Section************************************************/
+
+/********************************************************Household Exp Section************************************************/
+/*---------------------------------------------------Title of Household Exp Section-------------------------------------------------*/
+
+#household-expenditure-section-title{
 	background-color: #E1D5F2;	
 	height:30px;
     padding-top: 15px;
@@ -298,29 +387,27 @@ legend {
     align-items: center;
 }
 
-#factor-vs-factor-content-1{
+/*--------------------------------------------------------Household Exp Charts Area-------------------------------------------------*/
+#household-expenditure-analysis{
 	background-color: #E1D5F2;	
-	height:400px;
+	height:380px;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    padding: 10px;
+    
 }
 
 .content-text-box-3 {
 	background-color: #E1D5F2;	
     width: 90%;
     height: 350px;
-    margin: 5px 10px;
-    padding-left: 10px;
-    padding-right: 10px;
 }
-
-    #data-box-2 {
-        flex: 2;
+/*----------------------------------------------------------------Pie Chart----------------------------------------------------------*/
+    #expenditure-chart {
+        flex: 1;
         height: 350px;
         margin: 5px;
         padding-left: 10px;
@@ -328,14 +415,12 @@ legend {
         text-align: center;
         justify-content: center;
         align-items: center;
-        font-family:'Montserrat', sans-serif;
-        font-weight: 600;
-        color: black;
         font-size: 16px;
+        background-color: #E1D5F2;
     }
-
-    #explanation-box-2 {
-        flex: 2;
+/*----------------------------------------------------------------Bar Chart----------------------------------------------------------*/
+    #inflation-comparison-chart {
+        flex: 1;
         height: 350px;
         margin: 5px;
         padding-left: 10px;
@@ -343,13 +428,30 @@ legend {
         text-align: center;
         justify-content: center;
         align-items: center;
-        font-family:'Montserrat', sans-serif;
-        font-weight: 600;
-        color: black;
         font-size: 16px;
+        background-color: #E1D5F2;
     }
+/*------------------------------------------------------------Charts Explanation----------------------------------------------------------*/
+    #expenditure-explanation {
+        background-color: #261939;	
+        height:200px;
+        padding-top:15px;
+        padding-bottom:15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 0;
+        font-family: 'Press Start 2P', cursive;
+        color: white;
+        display: flex;
+        text-align: left;
+        justify-content: center;
+        align-items: center;
+        font-size: 11px;
+        line-height:2;
+    }
+/********************************************************End of Household Exp Section************************************************/
 
-/*Next Data Comparisonn 2*/
+
 #factor-vs-factor-title-2{
 	background-color: #50B4F2;	
 	height:30px;
