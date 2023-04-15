@@ -53,6 +53,46 @@ legend {
     color: white;
 }
 
+/****************************************************** Introduction Section***************************************************************/
+#intro-title{
+	background-color:#C6D1FA;	
+	height:30px;
+    padding-top: 15px;
+	margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro-content{
+	background-color:#C6D1FA;	
+	height:150px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+	margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height:1.7
+}
+
+.content-text-box-1 {
+	background-color: #9CAEF7;	
+    width: 100%;
+    height: 100%;
+    margin: 5px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 /****************************************************** Inflation Section***************************************************************/
 #context-title{
 	background-color:#9CAEF7;	
@@ -70,7 +110,7 @@ legend {
 #context-instructions{
 	background-color:#9CAEF7;	
 	height:30px;
-    padding-top: 15px;
+    padding-top: 0px;
 	margin: 0;
     font-family: 'Press Start 2P', cursive;
     color: black;
@@ -285,7 +325,6 @@ legend {
     /*-----------------------------------------------Income Change vs Inflaton Rate Table-------------------------------------------------*/
     #income-vs-cpi-content-2{
         background-color: #9677C3;	
-        
         padding: 20px;
         margin-top: 0;
     }
@@ -451,47 +490,33 @@ legend {
     }
 /********************************************************End of Household Exp Section************************************************/
 
+/***************************************************Government Assurance Packages Section************************************************/
+/*---------------------------------------------------Government Assurance Packages Title----------------------------------------------------------*/
 
-#factor-vs-factor-title-2{
+#government-title{
 	background-color: #50B4F2;	
 	height:30px;
     padding-top: 15px;
 	margin: 0;
     font-family: 'Press Start 2P', cursive;
-    color: white;
+    color: #031826;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
 }
 
-#factor-vs-factor-content-2{
-	background-color: #50B4F2;	
-	height:400px;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 10px;
+#space{
+    background-color: #50B4F2;	
+    height:15px; 
 }
 
-.content-text-box-4 {
-	background-color: #50B4F2;	
-    width: 90%;
-    height: 350px;
-    margin: 5px 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-    #data-box-3 {
-        flex: 2;
-        height: 350px;
-        margin: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
+/*---------------------------------------------------Government Assurance Packages Table----------------------------------------------------------*/
+    #government-package-table {
+        background-color: #50B4F2;
+        height: 600px;
+        padding-left: 20px;
+        padding-right: 20px;
         text-align: center;
         justify-content: center;
         align-items: center;
@@ -499,24 +524,39 @@ legend {
         font-weight: 600;
         color: black;
         font-size: 16px;
+        
     }
 
-    #explanation-box-3 {
-        flex: 2;
-        height: 350px;
-        margin: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        font-family:'Montserrat', sans-serif;
-        font-weight: 600;
-        color: black;
-        font-size: 16px;
+    .govt-row{
+        background-color: #B3DEF9;
+        line-height: 1.4;
     }
 
-/*Conclusion*/
+    .govt-td{
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .name-of-package{
+        background-color: #094971;
+        color: white;
+    }
+
+    #government-package-table-head{
+        background-color:#052539;
+        color:#F4F1F9;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 12px;
+        font-weight: 100;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+/***********************************************End of Government Assurance Packages Section************************************************/
+
+/**************************************************************Conclusion************************************************************************/
 #conclusion-title{
 	background-color: #F2B705;	
 	height:30px;
@@ -536,13 +576,14 @@ legend {
     padding: 10px;
     font-family: 'Press Start 2P', cursive;
     color: #592519;
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     justify-content: center;
     align-items: center;
+    line-height: 1.4;
 }
 
-/*bottom bar*/
+/*****************************************************************bottom bar*****************************************************************/
 #bottom-bar {
 	background-color: #E9ADCA;	
 	height:30px;

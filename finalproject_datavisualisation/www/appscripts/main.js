@@ -1,4 +1,4 @@
-//1.	Data Visualisation of increase in CPI to showcase inflation:
+//-----------------------------------------1.Data Visualisation of increase in CPI to showcase inflation----------------------------------------------
 
 //Update text when you click on factor 1
 function showFactor1Content() {
@@ -9,7 +9,6 @@ function showFactor1Content() {
 //Plot chart when factor 1 is clicked
   
       //source: https://www.singstat.gov.sg/whats-new/latest-news/cpi-highlights
-      //modified file: https://docs.google.com/spreadsheets/d/1UKnH-ILWtK5s1iOT8yHdvkV8a6Ix9HTs3_c1lqPk5WI/gviz/tq?tqx=out:csv 
       
       const labelYearallgoods = ["2015", "2016", "2017", "2018", "2019","2020","2021","2022"]
       const allgoods = {
@@ -134,8 +133,6 @@ function showFactor4Content() {
 //Plot chart when factor 4 is clicked
   
       //source: https://www.singstat.gov.sg/whats-new/latest-news/cpi-highlights
-      //modified file: https://docs.google.com/spreadsheets/d/1UKnH-ILWtK5s1iOT8yHdvkV8a6Ix9HTs3_c1lqPk5WI/gviz/tq?tqx=out:csv 
-      
       const labelYearallgoods = ["2015", "2016", "2017", "2018", "2019","2020","2021","2022"]
       const allgoods = {
         labels: labelYearallgoods,
@@ -326,7 +323,6 @@ function showFactor4Content() {
 
 //Plot chart when factor 3 is clicked
 //source: https://www.singstat.gov.sg/whats-new/latest-news/cpi-highlights
-//modified file: https://docs.google.com/spreadsheets/d/1UKnH-ILWtK5s1iOT8yHdvkV8a6Ix9HTs3_c1lqPk5WI/gviz/tq?tqx=out:csv 
   
 
       const labelYearoverallinflation = ["2015", "2016", "2017", "2018", "2019","2020","2021","2022"]; 
@@ -379,10 +375,8 @@ function showFactor4Content() {
       });
   };
 
-  //--------------------------------------------------------------------------------------------------------------------------------------//
+  //--------------------------------------------------INCOME PERCENTILE SECTION-----------------------------------------------------//
 
-    //Generate Income Percentile
-   
     function generateincomedecile() {
       let income = document.getElementById("input-income-value").value;
       if (income < 4110) {
@@ -412,7 +406,7 @@ function showFactor4Content() {
     }
 //--------------------------------------------------------------------------------------------------------------------------------------//
 
-                                             //2.Data Visualisation on average household income
+//--------------------------------------------2.Data Visualisation on average household income----------------------------------------------
 
 //---------------------------------------------------INCOME GROWTH GRAPH: LOW INCOME ---------------------------------------------------------
 
@@ -874,7 +868,7 @@ const chartColors = [
         
       }
     });
-  //---------------------------------------------------FINFLATION RATE COMPARISION CHART ---------------------------------------------------------
+  //---------------------------------------------------INFLATION RATE COMPARISION CHART ---------------------------------------------------------
 
     const labelYearinflationcompare = ["2018", "2019","2020","2021","2022"]
       const inflationcompare = {
@@ -970,7 +964,7 @@ const chartColors = [
           title: {
             display: true,
             text: ['Inflation Rates of Individual Categories from 2018 to 2022'],
-            fontColor: 'black',
+            fontColor: 'black ',
         }
         },
       });

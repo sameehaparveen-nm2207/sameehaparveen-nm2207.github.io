@@ -18,16 +18,28 @@
     
     
 <!------------------------------------------------------------ Title Bar -------------------------------------------------------------->
-
     <div id="title-bar">
         <p id = "title-text"> Can Singaporeans win the battle against the rising cost of living? <br><br>
         <img src="resources/boxing-gif.gif" height="100px"></p> 
-        
+    </div>
+<!----------------------------------------------------------End of Title Bar -------------------------------------------------------------->
+    <div id="border"></div> 
+<!---------------------------------------------------------- Introduction Section ------------------------------------------------------------------->
+    <div id="intro-title" >
+        <u>Introduction</u>
     </div>
 
-    <div id="border">
-    </div>
+    <div id="intro-content" >
 
+    	Singapore has once again been ranked as the world's most expensive city for the 8th time in a decade. 
+        It has faced a consistently high cost of living which has been further worsened due to the high inflation, the COVID-19 pandemic and the increase in GST. 
+        Prices haven risen by 8.1% in local-currency terms, which is the highest rate in 20 years. 
+        The high cost of living has even become a significant source of mental health worries among Singaporeans.
+        So, how "well" are Singaporeans coping with this rising cost of living? Let's find out!
+
+    </div>
+<!----------------------------------------------------- End of Introduction Section ------------------------------------------------------------------->
+    <div id="border"></div>
 <!---------------------------------------------------------- Inflation Section ------------------------------------------------------------------->
 
     <div id="context-title" >
@@ -55,10 +67,8 @@
         </div>
     </div>
 <!------------------------------------------------------------ End of Inflation ------------------------------------------------------------------->
-
     <div id="border"></div>
 <!------------------------------------------------------------ Income Percentile ------------------------------------------------------------------->
-
     <div id="fun-fact">
         Do you want to know which income percentile you belong to? <br><br><br>
         <div id = enter-income>
@@ -72,18 +82,13 @@
         <div id="result-percentile"></div> 
     </div>
 <!------------------------------------------------------- End of Income Percentile ------------------------------------------------------------------->
-
-    <div id="border">
-    </div>
+    <div id="border"></div>
 <!----------------------------------------------------Income vs Increase in CPI Comparison----------------------------------------------->
 <!------------------------------------------------Income vs Increase in CPI Comparison Graphs----------------------------------------------->
-
     <div id="income-vs-cpi-title" >
         <h2></h2>How does the average household income compare to inflation rates? </h2>
     </div>
-
 <!------------------------------------------------------High Income and Low Income Buttons----------------------------------------------->
-
     <div id="high-low-income" >
         <div class= "income-change clickable" id ="low-income" onclick="showlowincomegrowthcontent(); showlowincomechangecontent()">
             Lower Income Group
@@ -242,12 +247,9 @@
     From 2019 to 2020, inflation rate dropped to a negative, but most income growth rates also dropped to a negative, and to a more significant extent.
     From 2020 onwards, inflation rate continued to increase, so did the income growth rate. But a portion of the population's income growth rate went below inflation rate, meaning that their income was becoming insufficient to support them through the rising cost of living.
 </p>
-
-<!--------------------------------------------- ----End of Income vs Increase in CPI Comparison----------------------------------------------->
 </div>
+<!--------------------------------------------- ----End of Income vs Increase in CPI Comparison----------------------------------------------->
     <div id="border"></div>
-    
-    
 <!-------------------------------------------------------Household Expenditure Section----------------------------------------------->
     <div id="household-expenditure-section-title" >
         What do Singaporeans spend their monthly income on?
@@ -274,66 +276,84 @@
     </div> 
 
 <!-----------------------------------------------Inflation Rate Comparison from 2018 to 2022----------------------------------------------->
-
     <div id="border"></div>
-
-    <!--Next Data Comparison-->
-    <div id="factor-vs-factor-title-2" >
+<!---------------------------------------------------Government Assurance Packages Section------------------------------------------------------->
+<!----------------------------------------------------Government Assurance Packages Title------------------------------------------------------->
+    <div id="government-title" >
         So what is the government doing to help?
     </div>
 
-    <div id="factor-vs-factor-content-2">
-        <div class = "content-text-box-4" id = "data-box-3">
-            <canvas id = data-visualisation-3></canvas>
-                <table>
-                    <tr>
-                        <th id="income-table-head" colspan="13">Government Assurance Packages </th>
-                    </tr>
-                    <tr>
-                      <td>Cash payouts, vouchers and rebates</td>
-                      <td>-0.21</td>
-                    </tr>
-                    <tr>
-                        <td>Housing Grants</td>
-                        <td>-0.21</td>
-                      </tr>
-                      <tr>
-                        <td>Public Transport Benefits</td>
-                        <td>-0.21</td>
-                      </tr>
-                      <tr>
-                        <td>Childcare & Education Support</td>
-                        <td>-0.21</td>
-                      </tr>
-                      <tr>
-                        <td>Jobs Support & Unemployment Assistance</td>
-                        <td>-0.21</td>
-                      </tr>
-                    </table>
-        </div>
+    <div id="space"></div>
+<!--------------------------------------------------Table of Government Assurance Packages------------------------------------------------------->
+    <div id = "government-package-table">
+            <table>
+                <tr>
+                    <th id="government-package-table-head" colspan="13">Government Assurance Packages </th>
+                    <!--source: https://www.straitstimes.com/singapore/budget-2023-more-help-for-singaporeans-to-cope-with-rising-costs-gst-hike-->
+                    <!--source: https://www.mof.gov.sg/news-publications/press-releases/gstv-cash-rebates-cdc-vouchers-and-medisave-top-up-for-singaporeans-in-january-and-february-2023-->
 
-        <div class = "content-text-box-4" id= "explanation-box-3">
-            Explanation of data
-        </div>    
+
+                </tr>
+                <tr class="govt-row">
+                    <td class="govt-td name-of-package">Cash payouts</td>
+                    <td class="govt-td">This includes the cost-of-living special payment scheme, a one-off cash payment of $200 to $400 for eligible adult Singaporeans to minimise the impact of the rise in inflation on the lives of Singaporeans. 
+                        It also includes the cost-of-living seniors' bonus, a one-off cash payment of $200 to $300 for eligible Singaporeans aged 55 and above, and CDC vouchers.
+                    </td>
+                </tr>
+                <tr class="govt-row">
+                    <td class="govt-td name-of-package" >U-Save Rebates</td>
+                    <td class="govt-td">Aims to help eligible HDB households offset their utility bills. 
+                        The amount of U-Save Rebate that a household receives is determined by several factors, including the flat type, the household income, and the age of the flat. 
+                        The rebate amount is higher for lower-income households and older flats.
+                    </td>
+                    </tr>
+                <tr class="govt-row">
+                    <td class="govt-td name-of-package">Housing Grants</td>
+                    <td class="govt-td">Additional housing grants to help lower to middle income households purchase their first homes. This includes the Enhanced CPF Housing Grant (EHG) for first-time buyers with a household income of up to $9,000 per month,
+                        the Family Grant for married couples who are purchasing their first home, 
+                        the Proximity Housing Grant (PHG) for families who want to live close to their parents or married children
+                        and the Singles Grantor first-time single buyers who are purchasing a new or resale flat. </td>
+                    </tr>
+                    <tr class="govt-row">
+                    <td class="govt-td name-of-package">Public Transport Benefits</td>
+                    <td class="govt-td">Public Transport Vouchers for households with a monthly household income per person of not more than $1,600 and with  
+                        at least one Singapore Citizen or Singapore Permanent Resident (PR) </td>
+                    </tr>
+                    <tr class="govt-row">
+                    <td class="govt-td name-of-package">Childcare & Education Support</td>
+                    <td class="govt-td">Consists of the Enhanced Baby Bonus Scheme, Pre-School Subsidies and MOE Financial Assistance Schemes. 
+                        Additional subsidies are provided to children from lower income families.</td>
+                    </tr>
+                    <tr class="govt-row">
+                    <td class="govt-td name-of-package">Jobs Support & Unemployment Assistance</td>
+                    <td class="govt-td">The Jobs Support Scheme provides wage support to help employers retain their local employees. 
+                        The government provides a percentage of the gross monthly wages of each employee, up to a certain amount, to eligible employers. 
+                        The amount of support given to each employer depends on the sector they are in and how much their business has been affected by the pandemic.
+                    This scheme was introduced to minimise the impact of COVID-19 on unemployment.</td>
+                    </tr>
+                </table>
     </div>
+<!--------------------------------------------------End of Government Assurance Packages Section------------------------------------------------------->
     <div id="border"></div>
-
-    <!--Conclusion-->
+<!------------------------------------------------------------Conclusion------------------------------------------------------------------->
     <div id="conclusion-title" >
         Conclusion
     </div>
 
     <div id="conclusion-content">
-            In conclusion........blah blah blah
-        </div>
-    <div id="border"></div>
+        In conclusion, the data presented in the various graphs and charts highlight the impact of inflation on the income and expenditure patterns of Singaporeans. While the monthly average household income has generally seen an increase over the years, the pandemic has caused a temporary dip in income for most deciles in 2020. Although income started to increase again after 2020, a portion of the population's income growth rate went below inflation rate, which means that their income was becoming insufficient to support them through the rising cost of living. <br><br>
 
-    <!--Bottom Bar-->
+        The pie chart and bar chart reveal that Singaporeans spend most on food, transport, and recreation & culture. These categories are also more significantly impacted by inflation. The government has targeted these categories with its cash payouts and public transport vouchers. However, more can be done to support all Singaporeans, especially those from the middle income bracket, particularly in the area of transport.<br><br>
+
+        Overall, the data suggests that while the government has introduced various measures to help Singaporeans weather the impact of the pandemic and inflation, it is important to continue monitoring the income and expenditure patterns of Singaporeans to ensure that everyone is adequately supported.<br><br>
+        </div>
+<!------------------------------------------------------------End of Conclusion------------------------------------------------------------------->
+    <div id="border"></div>
+<!--------------------------------------------------------------Bottom Bar---------------------------------------------------------------------->
     <div id="bottom-bar"> 
         Thanks for reading! 
     </div>  
 
-    <!--Top Bar-->
     <div id="top-bar"> 
         <div id = "project-name">
             Sameeha's NM2207 Final Project <br>
@@ -341,6 +361,6 @@
     </div>  
     <div id="border"></div>
     
-
+<!--------------------------------------------------------------End of Page---------------------------------------------------------------------->
 </body>
 </html>
